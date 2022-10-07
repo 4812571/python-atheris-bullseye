@@ -1,0 +1,6 @@
+project: test-atheris
+target: fuzzer
+
+cmds:
+    - cmd: fuzz/fuzzme.py
+      libfuzzer: true
