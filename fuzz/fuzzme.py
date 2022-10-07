@@ -6,7 +6,6 @@ def MyTestFunction(num):
     if num == 2:
         raise Exception("You got it!")
 
-@atheris.instrument_func
 def TestOneInput(data):
     fdp = atheris.FuzzedDataProvider(data)
     num = fdp.ConsumeIntInRange(1, 10)
@@ -14,5 +13,6 @@ def TestOneInput(data):
     MyTestFunction(num)
 
 
+atheris.instrument_all()
 atheris.Setup(sys.argv, TestOneInput)
 atheris.Fuzz()
