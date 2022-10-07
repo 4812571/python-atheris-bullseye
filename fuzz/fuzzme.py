@@ -9,6 +9,8 @@ def TestOneInput(data):
     if num == 2:
         raise Exception("You got it!")
 
+
+#push
 atheris.instrument_all()
 atheris.Setup(sys.argv, TestOneInput)
 atheris.Fuzz()
