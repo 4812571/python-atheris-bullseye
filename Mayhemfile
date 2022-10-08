@@ -1,6 +1,10 @@
 project: test-atheris
 target: fuzzer
 
+tasks:
+  - name: exploitability_factors
+  - name: behavior_testing
+
 cmds:
     - cmd: /thefuzz/fuzz/fuzzme.py
       libfuzzer: true
