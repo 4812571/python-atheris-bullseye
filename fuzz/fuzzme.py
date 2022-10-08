@@ -3,16 +3,12 @@ import atheris
 import sys
 
 @atheris.instrument_func
-def MyTestFunction(num):
-    if num == 2:
-        raise Exception("You got it!")
-
-@atheris.instrument_func
 def TestOneInput(data):
-    fdp = atheris.FuzzedDataProvider(data)
-    num = fdp.ConsumeIntInRange(1, 10)
-
-    MyTestFunction(num)
+    if len(data) >= 3 :    
+        if data[0] == ord('b'):
+            if data[1] == ord('u'):
+                if data[2] == ord('g'):
+                    raise Exception("Made it to the bug!")
 
 atheris.Setup(sys.argv, TestOneInput)
 atheris.Fuzz()
