@@ -2,5 +2,5 @@ project: test-atheris
 target: fuzzer
 
 cmds:
-    - cmd: fuzz/fuzzme.py
+    - cmd: /thefuzz/fuzz/fuzzme.py
       libfuzzer: true

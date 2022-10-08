@@ -1,4 +1,4 @@
-FROM python:3.8-bullseye
+FROM python:3.10-bullseye
 RUN python3 -m pip install atheris
 COPY . /thefuzz
 WORKDIR /thefuzz
